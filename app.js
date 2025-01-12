@@ -33,6 +33,10 @@ const alumniSchema = new mongoose.Schema({
 // Model
 const Alumni = mongoose.model("Alumni", alumniSchema);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Alumni API");
+});
+
 // API to submit alumni form
 app.post("/submit-form", async (req, res) => {
   try {
